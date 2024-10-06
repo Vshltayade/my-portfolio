@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.root{
+    padding: 0 50px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    border: 1px solid;
+    padding: 10px 0;
+}
+
+nav p{
+    padding: 10px 0;
+}
+
+nav div{
+    display: flex;
+}
+
+nav div a{
+    padding: 10px 30px;
+    text-decoration: none;
+    color: black;
+}
+
+nav div a:hover{
+    background-color: gold;
+}
