@@ -201,6 +201,11 @@ nav div a:hover{
     display: none;
 }
 
+.logo-exp{
+    top: 1600px;
+    display: none;
+}
+
 
 
 
@@ -307,3 +312,71 @@ nav div a:hover{
     height: 440px;
 }
 
+
+
+
+
+
+
+
+
+
+/* Experience */
+
+#experience{
+    margin-top: 40%;
+}
+
+#experience h1:hover::before{
+    border: 3px solid orangered;
+    transform: scaleX(63);
+}
+
+.experience-details{
+    float: right;
+    margin: 25px;
+    padding: 35px 50px;
+    background-color: #444444;
+    border-radius: 10px;
+    color: #c5c5c5;
+    margin-right: 15%;
+}
+
+.experience-details h2{
+    font-size: 30px;
+    color: greenyellow;
+    padding: 8px 0;
+}
+
+.experience-details p {
+    font-size: 20px;
+    color: orange;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 6px 0;
+}
+
+.experience-details div {
+    padding: 10px 0;
+    color: palegoldenrod;
+}
+
+.experience-details div i:last-child{
+    padding-left: 40px;
+}
+
+.experience-details h3{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.experience-details ul{
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: 20px;
+    color: darkkhaki;
+}
+
+.experience-details ul li{
+    padding: 5px 0;
+}
