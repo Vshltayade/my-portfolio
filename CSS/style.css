@@ -98,6 +98,8 @@ nav div a:hover{
     display: flex;
     padding-bottom: 50px;
     margin-bottom: 50px;
+    opacity: 1;
+    transition: all 1s linear;
 }
 
 #about div{
@@ -206,6 +208,11 @@ nav div a:hover{
     display: none;
 }
 
+.logo-skl{
+    top: 2350px;
+    display: none;
+}
+
 
 
 
@@ -226,6 +233,7 @@ nav div a:hover{
     text-align: center;
     font-size: 60px;
     position: relative;
+    margin-top: 30px;
     margin-bottom: 75px;
     text-decoration: underline;
 }
@@ -258,18 +266,17 @@ nav div a:hover{
     padding: 15px;
     margin: 15px;
     border-radius: 10px;
-    /* background: linear-gradient(orange, yellow); */
-    /* background-color: orange; */
-    background: linear-gradient(to right, orange 20%, rgb(255, 215, 0) 30%, white 50%);
-    background-size: 200% ;
-    background-position: right;
-    transition: background .5s ease-out;
+    background-size: 200% 100%;
+    background-position: left;
+    opacity: 0;
     position: relative;
+    background: linear-gradient(to right, orange, yellow, white);
+    transition: all 1s ease;
 }
-
+/* 
 .education-details div:hover{
     background-position: left;
-}
+} */
 
 .education-details div h4{
     font-size: 22px;
@@ -328,7 +335,6 @@ nav div a:hover{
 }
 
 #experience h1:hover::before{
-    border: 3px solid orangered;
     transform: scaleX(63);
 }
 
@@ -340,6 +346,8 @@ nav div a:hover{
     border-radius: 10px;
     color: #c5c5c5;
     margin-right: 15%;
+    opacity: 1;
+    transition: all 1s ease;
 }
 
 .experience-details h2{
@@ -379,4 +387,84 @@ nav div a:hover{
 
 .experience-details ul li{
     padding: 5px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* skills */
+
+#skills{
+    margin-top: 40%;
+    padding: 50px;
+}
+
+#skills h1::before{
+    transform: scaleX(32);
+}
+
+.skill-item{
+    display: flex;
+    justify-content: space-evenly;
+    height: 420px;
+    font-weight: 600;
+    font-size: 30px;
+    opacity: 1;
+    transition: all 1s ease-in-out;
+}
+
+.skill-item > div{
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+}
+
+.skill-item > div:nth-child(2), .skill-item > div:nth-child(4){
+    align-content: end;
+    margin-top: 210px;
+}
+
+.skill-item > div:nth-child(1), .skill-item > div:nth-child(3){
+    align-content: start;
+    margin-bottom: 210px;
+}
+
+.skill-item > div:nth-child(1){
+    background-image: linear-gradient(270deg, #000 50%, transparent 50%), linear-gradient(79.2deg, #000 50%, transparent 50%);
+    transition: all 1s ease;
+}
+
+.skill-item > div:nth-child(2){
+    background-image: linear-gradient(270deg, #000 50%, transparent 50%), linear-gradient(72deg, #000 50%, transparent 50%);
+    transition: all 1s ease .5s;
+}
+
+.skill-item > div:nth-child(3){
+    background-image: linear-gradient(270deg, #000 50%, transparent 50%), linear-gradient(61.2deg, #000 50%, transparent 50%);
+    transition: all 1s ease;
+}
+
+.skill-item > div:nth-child(4){
+    background-image: linear-gradient(270deg, #000 50%, transparent 50%), linear-gradient(54deg, #000 50%, transparent 50%);
+    transition: all 1s ease .5s;
+}
+
+.perc{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 190px;
+    height: 190px;
+    align-content: center;
+    border-radius: 100%;
+    background-color: greenyellow;
 }
