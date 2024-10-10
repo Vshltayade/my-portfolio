@@ -5,6 +5,7 @@
 
 ::-webkit-scrollbar {
     width: 8px;
+    height: 8px;
 }
   
 ::-webkit-scrollbar-track {
@@ -213,6 +214,11 @@ nav div a:hover{
     display: none;
 }
 
+.logo-proj{
+    top: 3050px;
+    display: none;
+}
+
 
 
 
@@ -406,7 +412,7 @@ nav div a:hover{
     padding: 50px;
 }
 
-#skills h1::before{
+#skills h1:hover::before{
     transform: scaleX(32);
 }
 
@@ -467,4 +473,59 @@ nav div a:hover{
     align-content: center;
     border-radius: 100%;
     background-color: greenyellow;
+}
+
+
+
+
+
+
+
+
+
+
+/* projects */
+
+#projects{
+    /* margin-bottom: 40%; */
+}
+
+#projects h1:hover::before{
+    transform: scaleX(48);
+    top: 65px;
+    z-index: -9;
+}
+
+img{
+    width: 60%;
+    height: 450px;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.projects-items{
+    opacity: 1;
+    transition: all 2s ease;
+}
+
+.projects-items a{
+    display: flex;
+    margin: 30px 0;
+    justify-content: center;
+}
+
+#get-left{
+    position: absolute;
+    top: 400px;
+    left: 200px;
+    font-size: 50px;
+    color: gray;
+}
+
+#get-right{
+    position: absolute;
+    top: 400px;
+    left: 1175px;
+    font-size: 50px;
+    color: gray;
 }
