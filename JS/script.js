@@ -5,6 +5,7 @@ const logoEdu = document.getElementsByClassName('logo-edu')[0];
 const logoExp = document.getElementsByClassName('logo-exp')[0];
 const logoSkl = document.getElementsByClassName('logo-skl')[0];
 const logoProj = document.getElementsByClassName('logo-proj')[0];
+const logoCon = document.getElementsByClassName('logo-con')[0];
 const headerLinks = document.querySelectorAll('header a');
 const eduStyle = document.querySelectorAll('.education-details div');
 const expStyle = document.querySelector('.experience-details');
@@ -12,6 +13,14 @@ const sklStyle = document.querySelector('.skill-item');
 const projStyle = document.querySelector('.projects-items');
 const leftBtn = document.getElementById('get-left');
 const rightBtn = document.getElementById('get-right');
+const form = document.getElementById('form');
+const fname = document.getElementById('name');
+const femail = document.getElementById('email');
+const fmessage = document.getElementById('message');
+const fsend = document.getElementById('send');
+const nameError = document.getElementById('nameError');
+const emailError = document.getElementById('emailError');
+const messageError = document.getElementById('messageError');
 
 let lineHeight = line.getAttribute('style');
 
@@ -29,6 +38,8 @@ window.addEventListener('scroll', () => {
         h > 2350 ? logoSkl.style.display = 'block' : logoSkl.style.display = 'none';
 
         h > 3050 ? logoProj.style.display = 'block' : logoProj.style.display = 'none';
+
+        h > 3650 ? logoCon.style.display = 'block' : logoCon.style.display = 'none';
         
         h > 830 && h < 1480 ? eduStyle.item(0).style.opacity = 1 : eduStyle.item(0).style.opacity = 0;
         h > 950 && h < 1600 ? eduStyle.item(1).style.opacity = 1 : eduStyle.item(1).style.opacity = 0;
@@ -38,7 +49,7 @@ window.addEventListener('scroll', () => {
 
         h > 2500 && h < 3200 ? sklStyle.style.opacity = 1 : sklStyle.style.opacity = 0;
 
-        h > 3100 && h < 3500 ? projStyle.style.opacity = 1 : projStyle.style.opacity = 0;
+        h > 3100 && h < 3700 ? projStyle.style.opacity = 1 : projStyle.style.opacity = 0;
     }
 });
 
@@ -87,3 +98,59 @@ projStyle.children.item(1).children.item(0).addEventListener('click', (e) => {
 //     })
 //     if(i>=5) i=0;
 // },3000);
+
+
+
+form.addEventListener('submit', (e) => {
+    isEmpty();
+    if(!(f1 === 0 && f2 === 0 && f3 === 0)) e.preventDefault();
+    else {
+        // fname.value = '';
+        // femail.value = '';
+        // fmessage.value = '';
+    }
+})
+
+fname.addEventListener('focus', () => {
+    fname.style.border = '2px solid gold';
+})
+
+fname.addEventListener('blur', () => {
+    fname.style.border = 'none';
+})
+
+femail.addEventListener('focus', () => {
+    femail.style.border = '2px solid gold';
+})
+
+femail.addEventListener('blur', () => {
+    femail.style.border = 'none';
+})
+
+fmessage.addEventListener('focus', () => {
+    fmessage.style.border = '2px solid gold';
+})
+
+fmessage.addEventListener('blur', () => {
+    fmessage.style.border = 'none';
+})
+
+let [f1,f2, f3] = [1,1,1];
+
+function isEmpty(){
+    fname.value.length ? f1=0 : nameError.innerText = 'name is required';
+    f1 ? null : validName();
+    femail.value.length ? f2=0 : emailError.innerText = 'email is required';
+    f2 ? null : validEmail();
+    fmessage.value.length ? f3=0 : messageError.innerText = 'message is required';
+}
+
+function validName(){
+    const pattern = /^[A-Z\sa-z]{3,30}$/;
+    pattern.test(fname.value) ? nameError.innerText = '' : nameError.innerText = 'name should be letters only with length 3 to 30';
+}
+
+function validEmail(){
+    const pattern = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/;
+    pattern.test(femail.value) ? emailError.innerText = '' : emailError.innerText = 'please enter correct email';
+}

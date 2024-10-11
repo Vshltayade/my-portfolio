@@ -26,6 +26,10 @@
     font-family: "Roboto", sans-serif;
 }
 
+body{
+    background-color: whitesmoke;
+}
+
 .root{
     padding: 0 50px;
 }
@@ -199,24 +203,28 @@ nav div a:hover{
     transition: box-shadow 1s linear    ;
 }
 
+.logo-edu, .logo-exp, .logo-skl, .logo-proj, .logo-con{
+    display: none;
+}
+
 .logo-edu{
     top: 900px;
-    display: none;
 }
 
 .logo-exp{
     top: 1600px;
-    display: none;
 }
 
 .logo-skl{
     top: 2350px;
-    display: none;
 }
 
 .logo-proj{
     top: 3050px;
-    display: none;
+}
+
+.logo-con{
+    top: 3650px;
 }
 
 
@@ -250,7 +258,7 @@ nav div a:hover{
     top: 63px;
     left: 50%;
     transform: scaleX(1);
-    transition: transform .5s linear;
+    transition: transform 1s linear;
 }
 
 .sections h1:hover{
@@ -506,12 +514,11 @@ img{
 .projects-items{
     opacity: 1;
     transition: all 2s ease;
+    text-align: center;
 }
 
 .projects-items a{
-    display: flex;
     margin: 30px 0;
-    justify-content: center;
 }
 
 #get-left{
@@ -520,6 +527,8 @@ img{
     left: 200px;
     font-size: 50px;
     color: gray;
+    cursor: pointer;
+    z-index: 101;
 }
 
 #get-right{
@@ -528,4 +537,95 @@ img{
     left: 1175px;
     font-size: 50px;
     color: gray;
+    cursor: pointer;
+    z-index: 101;
 }
+
+
+
+
+
+
+
+
+
+
+/* contact  */
+
+#contact{
+    padding: 10px;
+    margin-top: 25px;
+}
+
+#contact h1:hover::before{
+    transform: scaleX(45);
+    top: 65px;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    margin-top: -30px;
+}
+
+#form{
+    background-color: rgba(0, 0, 0, 0.096);
+    padding: 10px 50px;
+    border-radius: 10px;
+}
+
+#form label{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#form input{
+    width: 320px;
+    height: 36px;
+    border-radius: 3px;
+    margin-top: 8px;
+    padding: 2px 5px;
+    font-size: 17px;
+    font-weight: 400;
+    outline: none;
+    border: none;
+    caret-color: gold;
+}
+
+#form small{
+    color: orangered;
+    font-size: 14px;
+}
+
+#form textarea{
+    width: 320px;
+    border-radius: 3px;
+    margin-top: 8px;
+    padding: 2px 5px;
+    font-size: 17px;
+    font-weight: 400;
+    outline: none;
+    border: none;
+    caret-color: gold;
+}
+
+#form div{
+    float: right;
+}
+
+#form button{
+    border: none;
+    border-radius: 5px;
+    width: 80px;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 8px 0;
+    background-color: orange;
+}
+
+#form button:hover{
+    background-color: greenyellow;
+    cursor: pointer;
+}
+
